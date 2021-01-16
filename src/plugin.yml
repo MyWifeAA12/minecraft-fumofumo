@@ -1,0 +1,6 @@
+name: FumoFumo
+main: main
+version: 1.488
+description: FOOOMOOOOOOOOOOOO
+api-version: 1.16
+depend: [NBTAPI]
