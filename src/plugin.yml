@@ -1,6 +1,8 @@
 name: FumoFumo
 main: main
 version: 1.488
-description: FOOOMOOOOOOOOOOOO
+description: FUUUMOOOOOOOOOOOO
 api-version: 1.16
 depend: [NBTAPI]
+authors: [ Keksandra ]
+website: boards.4chan.org/bant
