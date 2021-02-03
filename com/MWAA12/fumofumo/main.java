@@ -1,6 +1,5 @@
-import commands.fumocommands;
-import events.fumoevents;
-import fumos.manager;
+package com.MWAA12.fumofumo;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class main extends JavaPlugin {

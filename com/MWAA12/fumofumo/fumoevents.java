@@ -1,4 +1,4 @@
-package events;
+package com.MWAA12.fumofumo;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.ArmorStand;

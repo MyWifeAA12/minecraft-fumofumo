@@ -1,11 +1,10 @@
-package commands;
+package com.MWAA12.fumofumo;
 
-import fumos.manager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
+//debug command to spawn a cirno fumo
 public class fumocommands implements CommandExecutor {
 
     @Override

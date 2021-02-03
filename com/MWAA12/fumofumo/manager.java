@@ -1,4 +1,4 @@
-package fumos;
+package com.MWAA12.fumofumo;
 
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
