@@ -1,4 +1,4 @@
-package com.MWAA12.fumofumo;
+package net.caradr42.fumofumo;
 
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -11,18 +11,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class manager {
-
     public static ItemStack cirno;
 
     public static void init(){
         createcirno();
-
-
     }
 
     private static void createcirno(){
         Material type = Material.matchMaterial("PLAYER_HEAD");
-
 
         ItemStack item = new ItemStack(type,1);
 
@@ -36,13 +32,7 @@ public class manager {
         item.setItemMeta(meta);
 
         cirno = item;
-
     }
 
-    private static void createfumo(){
-
-
-
-
-    }
+    private static void createfumo(){}
 }

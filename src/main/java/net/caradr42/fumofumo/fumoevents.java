@@ -1,4 +1,5 @@
-package com.MWAA12.fumofumo;
+package net.caradr42.fumofumo;
+
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.ArmorStand;
@@ -60,7 +61,6 @@ public class fumoevents implements Listener {
                 armorstand.setRightArmPose(new EulerAngle(0, 0, 0.349066));
                 armorstand.setInvulnerable(true);
 
-
                 NBTItem nbti = new NBTItem(rblock);
                 List<String> lore = rblock.getItemMeta().getLore();
                 if(nbti.getBoolean("isfumo") == true);
@@ -70,15 +70,10 @@ public class fumoevents implements Listener {
                     armorstand.setLeggings(nbti.getItemStack("leg"));
                     armorstand.setBoots(nbti.getItemStack("boots"));
 
-
-
-                }
-
                 }
             }
-
-
         }
+    }
 
     @EventHandler
     public static void fumomisplace(BlockPlaceEvent event) {
@@ -87,24 +82,14 @@ public class fumoevents implements Listener {
         Player player = event.getPlayer();
         NBTItem nbti = new NBTItem(block);
         if(nbti.getBoolean("isfumo").equals(true) && !(player.isSneaking())){
-
             event.setCancelled(true);
             player.sendMessage("§4Please undress the fumo to put the head down normally");
-
-
-
         }
         else if(nbti.getBoolean("isfumo").equals(false)) {
-
-
             NBTTileEntity head = new NBTTileEntity(event.getBlockPlaced().getState());
             head.setString("Name", nbti.getString("Name"));
         }
-
-
     }
-
-
 
 
     @EventHandler
@@ -117,43 +102,44 @@ public class fumoevents implements Listener {
         {
             if(event.getAction().equals(Action.LEFT_CLICK_AIR) || event.getAction().equals(Action.LEFT_CLICK_BLOCK)) {
 
-            ArmorStand armorstand = (ArmorStand) player.getWorld().spawnEntity(player.getEyeLocation(), EntityType.ARMOR_STAND);
-            Vector direction = player.getEyeLocation().getDirection();
-            ItemStack item2 = item.clone();
-            item.setAmount(1);
-            armorstand.setHelmet(item);
-            armorstand.setCustomName(item.getItemMeta().getDisplayName());
-            armorstand.setCustomNameVisible(true);
-            armorstand.setArms(true);
-            armorstand.setBasePlate(false);
-            armorstand.setSmall(true);
-            armorstand.setLeftLegPose(new EulerAngle(4.83456, 6.19592, 0));
-            armorstand.setRightLegPose(new EulerAngle(4.83456, 0.0872665, 0));
-            armorstand.setLeftArmPose(new EulerAngle(0, 0, 5.93412));
-            armorstand.setRightArmPose(new EulerAngle(0, 0, 0.349066));
+                ArmorStand armorstand = (ArmorStand) player.getWorld().spawnEntity(player.getEyeLocation(), EntityType.ARMOR_STAND);
+                Vector direction = player.getEyeLocation().getDirection();
+                ItemStack item2 = item.clone();
+                item.setAmount(1);
+                //armorstand.getEquipment().setHelmet(item);
+                armorstand.setHelmet(item);
+                armorstand.setCustomName(item.getItemMeta().getDisplayName());
+                armorstand.setCustomNameVisible(true);
+                armorstand.setArms(true);
+                armorstand.setBasePlate(false);
+                armorstand.setSmall(true);
+                armorstand.setLeftLegPose(new EulerAngle(4.83456, 6.19592, 0));
+                armorstand.setRightLegPose(new EulerAngle(4.83456, 0.0872665, 0));
+                armorstand.setLeftArmPose(new EulerAngle(0, 0, 5.93412));
+                armorstand.setRightArmPose(new EulerAngle(0, 0, 0.349066));
 
-            armorstand.setInvulnerable(true);
+                armorstand.setInvulnerable(true);
 
-            List<String> lore = item.getItemMeta().getLore();
-            NBTItem nbti = new NBTItem(item);
+                List<String> lore = item.getItemMeta().getLore();
+                NBTItem nbti = new NBTItem(item);
 
-            if(nbti.getBoolean("isfumo") == true) {
+                if(nbti.getBoolean("isfumo")) {
 
-                armorstand.setItemInHand(nbti.getItemStack("hand"));
-                armorstand.setChestplate(nbti.getItemStack("chest"));
-                armorstand.setLeggings(nbti.getItemStack("leg"));
-                armorstand.setBoots(nbti.getItemStack("boots"));
+                    armorstand.setItemInHand(nbti.getItemStack("hand"));
+                    armorstand.setChestplate(nbti.getItemStack("chest"));
+                    armorstand.setLeggings(nbti.getItemStack("leg"));
+                    armorstand.setBoots(nbti.getItemStack("boots"));
                 }
 
-            double xV = direction.getX() * 0.75;
-            double yV = direction.getY() * 0.75;
-            double zV = direction.getZ() * 0.75;
-            Vector velocity = new Vector(xV, yV, zV);
-            armorstand.setVelocity(velocity);
+                double xV = direction.getX() * 0.75;
+                double yV = direction.getY() * 0.75;
+                double zV = direction.getZ() * 0.75;
+                Vector velocity = new Vector(xV, yV, zV);
+                armorstand.setVelocity(velocity);
 
-            if (item2.getAmount() > 1) item.setAmount(item2.getAmount()-1);
-            else{player.getInventory().setItemInHand(null);}
-        }
+                if (item2.getAmount() > 1) item.setAmount(item2.getAmount()-1);
+                else{player.getInventory().setItemInHand(null);}
+            }
         }
 
 
@@ -221,5 +207,3 @@ public class fumoevents implements Listener {
     }
 
 }
-
-

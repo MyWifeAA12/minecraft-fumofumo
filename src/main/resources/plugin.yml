@@ -1,0 +1,8 @@
+name: FumoFumo
+version: '${project.version}'
+main: net.caradr42.fumofumo.main
+api-version: 1.19
+depend: [ NBTAPI ]
+authors: [ MyWifeAA12, Caradr42 ]
+description: FUMO FUMO FUMO FUMO FUMO FUMO FUMO
+website: boards.4chan.org/bant
