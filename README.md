@@ -1,4 +1,4 @@
-This is fork of the original fumofumo plugin at https://github.com/MyWifeAA12/minecraft-fumofumo
+This is a fork of the original fumofumo plugin at https://github.com/MyWifeAA12/minecraft-fumofumo
 Updated to MC 1.19.1
 
 # minecraft-fumofumo
