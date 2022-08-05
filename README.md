@@ -1,8 +1,11 @@
+This is fork of the original fumofumo plugin at https://github.com/MyWifeAA12/minecraft-fumofumo
+Updated to MC 1.19.1
+
 # minecraft-fumofumo
 A spigot plugin to add soft and adorable plushie friends in minecraft!
-![alt text](https://raw.githubusercontent.com/MyWifeAA12/minecraft-fumofumo/main/snowyfumowonderland.png)
+![alt text](https://raw.githubusercontent.com/Caradr42/minecraft-fumofumo/main/snowyfumowonderland.png)
 ## Installation
-* Download the latest release at https://github.com/MyWifeAA12/minecraft-fumofumo/releases
+* Download the latest release at https://github.com/Caradr42/minecraft-fumofumo/releases
 * Download dependency at https://www.spigotmc.org/resources/nbt-api.7939/
 * Place both jars on the plugin folder of your spigot server
 * hug your new soft girls!
